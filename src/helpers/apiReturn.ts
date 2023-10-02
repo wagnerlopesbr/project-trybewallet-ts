@@ -1,4 +1,4 @@
-const APIReturn = {
+const apiReturn = {
   USD: {
     code: 'USD',
     codein: 'BRL',
@@ -196,5 +196,5 @@ const APIReturn = {
   },
 };
 
-export type Rates = typeof APIReturn;
-export type RatesOption = keyof typeof APIReturn;
+export type Rates = typeof apiReturn;
+export type RatesOption = keyof typeof apiReturn;
