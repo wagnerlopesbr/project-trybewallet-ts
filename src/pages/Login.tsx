@@ -17,8 +17,6 @@ function Login() {
   const validatingEmail = email.includes('@') && email.includes('.');
   const validatingPassword = password.length >= 6;
 
-  const allValid = validatingEmail && validatingPassword;
-
   const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
     return validatingEmail;
@@ -52,7 +50,7 @@ function Login() {
         </form>
       </div>
       <div>
-        <button type="button" disabled={ !allValid } onClick={ handleSubmit }>
+        <button type="button" disabled={ !validatingEmail && validatingPassword } onClick={ handleSubmit }>
           Entrar
         </button>
       </div>
