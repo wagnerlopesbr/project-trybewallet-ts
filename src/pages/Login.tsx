@@ -35,7 +35,6 @@ function Login() {
     <div>
       <div>
         <form>
-          <label htmlFor="email">Email:</label>
           <input
             type="email"
             id="email"
@@ -44,7 +43,6 @@ function Login() {
             onChange={ handleInput }
             data-testid="email-input"
           />
-          <label htmlFor="password">Senha:</label>
           <input
             type="password"
             id="password"
