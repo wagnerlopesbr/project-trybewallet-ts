@@ -1,6 +1,6 @@
 function Header() {
   return <div>Header</div>;
-  //first commit
+  // first commit
 }
 
 export default Header;

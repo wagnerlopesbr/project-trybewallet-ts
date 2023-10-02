@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+import { useSelector } from 'react-redux';
 
 function Wallet() {
   const login = useSelector((state: any) => state.user.login);

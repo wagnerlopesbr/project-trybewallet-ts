@@ -1,9 +1,8 @@
-import { LoginType } from "../types";
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { addLoginAction } from "../redux/actions";
-
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { LoginType } from '../types';
+import { addLoginAction } from '../redux/actions';
 
 function Login() {
   const navigate = useNavigate();
@@ -11,15 +10,15 @@ function Login() {
   const [login, setLogin] = useState<LoginType>(
     {
       email: '',
-      password: ''
-    }
+      password: '',
+    },
   );
 
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target;
     setLogin({
       ...login,
-      [id]: value
+      [id]: value,
     });
   };
 
@@ -33,41 +32,39 @@ function Login() {
     && login.email.includes('.');
 
   return (
-    <>
+    <div>
       <div>
-        <div>
-          <form>
-            <label htmlFor="email">Email:</label>
-            <input 
-              type="email"
-              id="email"
-              placeholder="Email"
-              value={ login.email }
-              onChange={ handleInput } 
-              data-testid="email-input"
-            />
-            <label htmlFor="password">Senha:</label>
-            <input 
-              type="password"
-              id="password"
-              placeholder="Senha"
-              value={ login.password }
-              onChange={ handleInput } 
-              data-testid="password-input"
-            />
-          </form>
-        </div>
-        <div>
-          <button
-            type="button"
-            disabled={ !validating }
-            onClick={ handleSubmit }
-          >
-            Entrar
-          </button>
-        </div>
+        <form>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            value={ login.email }
+            onChange={ handleInput }
+            data-testid="email-input"
+          />
+          <label htmlFor="password">Senha:</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Senha"
+            value={ login.password }
+            onChange={ handleInput }
+            data-testid="password-input"
+          />
+        </form>
       </div>
-    </>
+      <div>
+        <button
+          type="button"
+          disabled={ !validating }
+          onClick={ handleSubmit }
+        >
+          Entrar
+        </button>
+      </div>
+    </div>
   );
 }
 
