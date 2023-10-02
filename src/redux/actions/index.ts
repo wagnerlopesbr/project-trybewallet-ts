@@ -1,10 +1,10 @@
 // Coloque aqui suas actions
+import { Dispatch, Expense } from '../../types';
 export const ADD_USER = 'ADD_USER';
 export const ADD_EXPENSE = 'ADD_EXPENSE';
 export const REQUEST_START = 'REQUEST_START';
 export const REQUEST_SUCCESS = 'REQUEST_SUCCESS';
 export const REQUEST_FAILED = 'REQUEST_FAILED';
-import { Dispatch, Expense } from '../../types';
 
 export const addLoginAction = (email: string) => {
   return {

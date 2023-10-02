@@ -1,12 +1,10 @@
 import { useSelector } from 'react-redux';
 import { GlobalState } from '../types';
-import wallet from '../redux/reducers/wallet';
 
 function Header() {
   const { user, wallet } = useSelector((state: GlobalState) => state);
 
   const getTotal = () => {
-    
     return wallet.expenses.reduce((acc, curr) => {
       const { currency, exchangeRates } = curr;
       const ask = Number(exchangeRates[currency].ask);
