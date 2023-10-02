@@ -10,23 +10,23 @@ function Login() {
   const [password, setPassword] = useState('');
 
   const handleSubmit = () => {
-    dispatch(addLoginAction(email));
-    navigate('/carteira');
+    const isEmailValid = email.includes('@') && email.includes('.');
+    const isPasswordValid = password.length >= 6;
+  
+    if (isEmailValid && isPasswordValid) {
+      dispatch(addLoginAction(email));
+      navigate('/carteira');
+    } else {
+      // Realize alguma ação para tratar campos inválidos, como exibir uma mensagem de erro.
+    }
   };
-
-  const validatingEmail = email.includes('@') && email.includes('.');
-  const validatingPassword = password.length >= 6;
-
-  const allValid = validatingEmail && validatingPassword;
 
   const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
-    return validatingEmail;
   };
-
+  
   const handlePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value);
-    return validatingPassword;
   };
 
   return (
@@ -50,7 +50,9 @@ function Login() {
       <div>
         <button
           type="button"
-          disabled={ !allValid }
+          disabled={ 
+            !(email.includes('@') && email.includes('.') && password.length >= 6)
+          }
           onClick={ () => { handleSubmit(); } }
         >
           Entrar
