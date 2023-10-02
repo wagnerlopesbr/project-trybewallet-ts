@@ -35,17 +35,13 @@ function Login() {
         <form>
           <input
             type="email"
-            id="email"
             placeholder="Email"
-            value={ email }
             onChange={ (e) => { handleEmail(e); } }
             data-testid="email-input"
           />
           <input
             type="password"
-            id="password"
             placeholder="Senha"
-            value={ password }
             onChange={ (e) => { handlePassword(e); } }
             data-testid="password-input"
           />
