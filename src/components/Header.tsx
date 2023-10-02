@@ -7,7 +7,7 @@ function Header() {
   return (
     <header>
       <p data-testid="email-field">
-        Login: 
+        Login:
         {email}
       </p>
       <p data-testid="total-field">Total: 0</p>
