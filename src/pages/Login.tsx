@@ -12,7 +12,7 @@ function Login() {
   const handleSubmit = () => {
     const isEmailValid = email.includes('@') && email.includes('.');
     const isPasswordValid = password.length >= 6;
-  
+
     if (isEmailValid && isPasswordValid) {
       dispatch(addLoginAction(email));
       navigate('/carteira');
@@ -24,7 +24,7 @@ function Login() {
   const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
   };
-  
+
   const handlePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value);
   };
@@ -50,7 +50,7 @@ function Login() {
       <div>
         <button
           type="button"
-          disabled={ 
+          disabled={
             !(email.includes('@') && email.includes('.') && password.length >= 6)
           }
           onClick={ () => { handleSubmit(); } }
