@@ -55,7 +55,8 @@ function Login() {
         <button
           type="button"
           disabled={ !allValid }
-          onClick={ () => { handleSubmit(); } }>
+          onClick={ () => { handleSubmit(); } }
+        >
           Entrar
         </button>
       </div>
