@@ -54,9 +54,7 @@ function Login() {
       <div>
         <button
           type="button"
-          disabled={
-            !(email.includes('@') && email.includes('.') && password.length >= 6)
-          }
+          disabled={ !(isEmailValid() && isPasswordValid()) }
           onClick={ () => { handleSubmit(); } }
         >
           Entrar
