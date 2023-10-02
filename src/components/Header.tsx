@@ -1,7 +1,8 @@
 import { useSelector } from 'react-redux';
+import { GlobalState } from '../types';
 
 function Header() {
-  const email = useSelector((state: any) => state.user.email);
+  const email = useSelector((state: GlobalState) => state.user.email);
   console.log(email);
   return (
     <header>

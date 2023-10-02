@@ -9,7 +9,7 @@ export type ActionType = {
 };
 
 export type GlobalState = {
-  login: {
+  user: {
     email: string | null;
   }
 };
