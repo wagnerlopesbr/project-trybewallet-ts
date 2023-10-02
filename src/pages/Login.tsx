@@ -50,7 +50,11 @@ function Login() {
         </form>
       </div>
       <div>
-        <button type="button" disabled={ !validatingEmail && validatingPassword } onClick={ handleSubmit }>
+        <button
+          type="button"
+          disabled={ !validatingEmail && validatingPassword }
+          onClick={ handleSubmit }
+        >
           Entrar
         </button>
       </div>
