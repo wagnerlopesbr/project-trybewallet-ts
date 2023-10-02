@@ -1,9 +1,18 @@
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
+import { GlobalState } from "../types";
 
 function Wallet() {
-  const login = useSelector((state: any) => state.user.login);
+  const loginState = useSelector((state: GlobalState) => state.login);
   return (
-    <h1>{login}</h1>
+    <div>
+      <header>Wallet</header>
+      <p data-testid="email-field">
+        Login:
+        {loginState.email}
+      </p>
+      <p data-testid="total-field">Total: 0</p>
+      <p data-testid="header-currency-field">BRL</p>
+    </div>
   );
 }
 
