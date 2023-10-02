@@ -23,5 +23,5 @@ function Input(props: PropsType) {
     </div>
   );
 }
-  
+
 export default Input;

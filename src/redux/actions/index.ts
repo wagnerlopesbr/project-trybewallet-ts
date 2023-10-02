@@ -1,5 +1,6 @@
 // Coloque aqui suas actions
 import { Dispatch, Expense } from '../../types';
+
 export const ADD_USER = 'ADD_USER';
 export const ADD_EXPENSE = 'ADD_EXPENSE';
 export const REQUEST_START = 'REQUEST_START';
