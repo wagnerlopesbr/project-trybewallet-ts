@@ -1,5 +1,5 @@
-import { useSelector } from "react-redux";
-import { GlobalState } from "../types";
+import { useSelector } from 'react-redux';
+import { GlobalState } from '../types';
 
 function Header() {
   const loginState = useSelector((state: GlobalState) => state.login);
