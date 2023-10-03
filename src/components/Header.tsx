@@ -15,11 +15,9 @@ function Header() {
   return (
     <header>
       <p data-testid="email-field">
-        Login:
         {user.email}
       </p>
       <p data-testid="total-field">
-        Total:
         {getTotal()}
       </p>
       <p data-testid="header-currency-field">BRL</p>
