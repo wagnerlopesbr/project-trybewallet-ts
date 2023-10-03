@@ -5,7 +5,7 @@ import {
   REMOVE_EXPENSE,
   REQUEST_FAILED,
   REQUEST_START,
-  REQUEST_SUCCESS
+  REQUEST_SUCCESS,
 } from '../actions';
 
 const walletState = {

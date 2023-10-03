@@ -4,7 +4,7 @@ import { removeExpenseAction } from '../redux/actions';
 
 function Table() {
   const { expenses } = useSelector((state: GlobalState) => state.wallet);
-  
+
   const handleDelete = (itemID: number) => {
     removeExpenseAction(itemID);
   };
@@ -36,7 +36,7 @@ function Table() {
               <td>
                 {
                   Number(
-                    expense.exchangeRates[expense.currency].ask
+                    expense.exchangeRates[expense.currency].ask,
                   ).toFixed(2)
                 }
               </td>
@@ -44,14 +44,17 @@ function Table() {
                 {
                   (
                     Number(
-                      expense.exchangeRates[expense.currency].ask
+                      expense.exchangeRates[expense.currency].ask,
                     ) * Number(expense.value)
                   ).toFixed(2)
                 }
               </td>
               <td>Real</td>
               <td>
-                <button onClick={() => handleDelete(expense.id)}>Excluir</button>
+                <button onClick={ () => handleDelete(expense.id) }
+                >
+                  Excluir
+                </button>
               </td>
             </tr>
           ))}
