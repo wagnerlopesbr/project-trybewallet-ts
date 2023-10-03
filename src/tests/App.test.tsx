@@ -1,7 +1,6 @@
-import { screen, waitFor } from '@testing-library/react';
-import { renderWithRouterAndRedux } from './helpers/renderWith';
-
+import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { renderWithRouterAndRedux } from './helpers/renderWith';
 import App from '../App';
 
 describe('Testando a página', () => {
@@ -22,9 +21,9 @@ describe('Testando a página', () => {
   });
 
   it('se renderiza o botão de login com o texto correto ("Entrar")', () => {
-      renderWithRouterAndRedux(<App />);
-      const loginButton = screen.getByRole('button');
-      expect(loginButton).toHaveTextContent('Entrar');
+    renderWithRouterAndRedux(<App />);
+    const loginButton = screen.getByRole('button');
+    expect(loginButton).toHaveTextContent('Entrar');
   });
 
   it('se o botão de login fica desabilitado caso algum campo obrigatório não esteja devidamente preenchido', async () => {
