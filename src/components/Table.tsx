@@ -51,7 +51,7 @@ function Table() {
               </td>
               <td>Real</td>
               <td>
-                <button 
+                <button
                   onClick={
                     () => handleDelete(expense.id)
                   }
