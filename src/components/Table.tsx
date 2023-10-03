@@ -51,9 +51,10 @@ function Table() {
               </td>
               <td>Real</td>
               <td>
-                <button onClick={
-                  () => handleDelete(expense.id)
-                }
+                <button 
+                  onClick={
+                    () => handleDelete(expense.id)
+                  }
                 >
                   Excluir
                 </button>
